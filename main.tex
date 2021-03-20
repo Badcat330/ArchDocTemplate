@@ -1,0 +1,133 @@
+
+\documentclass[a4paper,18pt]{article} % добавить leqno в [] для нумерации слева
+
+\linespread{1.6}
+
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+%%% Гипер ссылки
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{000000} % цвет ссылок
+\definecolor{urlcolor}{HTML}{191970} % цвет гиперссылок
+\hypersetup{pdfstartview=FitH, citecolor=black, linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Номера формул
+%\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+\usepackage{setspace}
+\onehalfspacing
+
+%%Картинки
+\usepackage{graphicx}
+\graphicspath{{../pictures/}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+% обновленная команда для нумерации секций
+	\renewcommand{\thesection}{\arabic{section}}
+	\setcounter{section}{0}
+
+
+\title{\textbf{\Huge Архитектурный документ} \\ {\Large Название проекта}}
+\author{Автор- БПИ183}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{\textbf{Раздел регистрации изменений}}
+
+\begin{table}[h]
+    \flushleft
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Версия документа} & \textbf{Дата} & \textbf{Описнаие изменения} & \textbf{Автор} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+\section{\textbf{Введение}}
+
+\subsection{\textbf{Название проекта}}
+
+\subsection{\textbf{Рамки проекта (Scope)}}
+
+\section{\textbf{Общее описание архитектуры, задействованные архитектурные представления}}
+
+\section{\textbf{Архитектурные факторы (цели и ограничения)}}
+
+
+\newpage
+\section{\textbf{Технические описания архитектурных решений}}
+
+\subsection{\textbf{Техническое описание №1}}
+
+\subsubsection{\textbf{Проблема}}
+\subsubsection{\textbf{Идея решения}}
+\subsubsection{\textbf{Факторы}}
+\subsubsection{\textbf{Решение}}
+\subsubsection{\textbf{Мотивировка}}
+\subsubsection{\textbf{Неразрешенные вопросы}}
+\subsubsection{\textbf{Альтернативы}}
+
+
+\newpage
+\section{\textbf{Представления архитектуры}}
+\subsection{\textbf{Представление прецедентов (сценариев использования)}}
+
+\subsection{\textbf{Логическое представление архитектуры}}
+
+\subsection{\textbf{Представление архитектуры процессов}}
+
+\subsection{\textbf{Физическое представление архитектуры}}
+
+\subsection{\textbf{Представление развертывания}}
+
+\subsection{\textbf{Представление архитектуры данных}}
+
+\subsection{\textbf{Представление архитектуры безопасности}}
+
+\subsection{\textbf{Представление реализации}}
+
+\subsection{\textbf{Представление разработки}}
+
+\subsection{\textbf{Представление производительности}}
+
+\subsection{\textbf{Нефункциональные аспекты}}
+\subsubsection{\textbf{Объем данных и производительность системы}}
+\subsubsection{\textbf{Гарантии качества работы системы}}
+
+\subsection{\textbf{Другие представления}}
+
+
+\newpage
+
+\addcontentsline{toc}{section}{Глоссарий}
+\section*{Глоссарий}
+\begin{itemize}
+    \item Система управления базой данных (СУБД) -- совокупность программных и лингвистических средств общего или специального назначения, обеспечивающих управление созданием и использованием баз данных.
+\end{itemize}
+
+\bibliographystyle{unsrt}                                   
+\bibliography{references}
+
+\end{document}
